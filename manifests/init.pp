@@ -1,4 +1,6 @@
 class jboss {
+    include jboss::prereq
+    Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
     $conf = hiera_hash('jboss::install',undef)
     $baseDir = $conf["baseDir"]
     $version = $conf["version"]

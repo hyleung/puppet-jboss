@@ -26,10 +26,7 @@ class jboss::install($baseDir,
         "${baseDir}":
             ensure => directory;           
     }
-    package {
-        "unzip":
-            ensure => installed;
-    }
+
     exec {
         "unzip-jboss":
             command => "unzip -o /var/lib/puppet/files/${version}.zip -d ${baseDir}",
