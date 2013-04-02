@@ -8,7 +8,7 @@ class jboss {
     $bindAddress = $conf["bindAddress"]
     $user = $conf["user"]
 
-    notice("$conf")
+    # notice("$conf")
 
     if $conf {
         class { "jboss::install":
