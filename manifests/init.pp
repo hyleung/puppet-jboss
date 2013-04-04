@@ -39,6 +39,17 @@ class jboss {
             }
             create_resources("jboss::xaDatasource",$datasources)
         }
+        $deployFiles = $conf["deployFiles"]
+        if $deployFiles {
+            Jboss::DeployFile {
+                baseDir => $baseDir,
+                version => $version,
+                serverConf => $serverConf,
+                user => $user,
+                group => $user
+            }
+            create_resources("jboss::deployFile",$deployFiles)
+        }
     }
     if !$conf {
         notice("no conf")
