@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+  <no-tx-datasource>
+    <jndi-name><%= @dsJndiName %></jndi-name>
+    <connection-url><%= @dsUrl %></connection-url>
+    <driver-class><%= @dsClass %></driver-class>
+    <user-name><%= @dsUser %></user-name>
+    <password><%= @dsPassword %></password>
+    <exception-sorter-class-name><%= @dsExceptionSorterClass %></exception-sorter-class-name>
+    <metadata>
+      <type-mapping><%= @dsTypeMapping %></type-mapping>
+    </metadata>
+  </no-tx-datasource>
+</datasources>
